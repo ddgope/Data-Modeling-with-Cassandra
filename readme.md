@@ -39,7 +39,7 @@
      1. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
 
     I need to introduce a fair amount of denormalization to support the above queries as shown below data model which has been designed based on query approach
-     ![Cassandra Data Model](/images/Cassandra_Data_Model.jpg)  
+     ![Cassandra Data Model](https://github.com/ddgope/Data-Modeling-with-Cassandra/blob/master/Cassandra_Data_Model.jpg)  
     **Inefficient Query Patterns** : Due to the way that Cassandra stores data, some query patterns are not at all efficient, including the following:
          1. Fetching data from multiple partitions – this will require a coordinator to fetch the data from multiple nodes, store it temporarily in heap, and then aggregate the data before returning results to the user
          1. Join-based queries – due to its distributed nature, Cassandra does not support table joins in queries the same way a relational database does, and as a result, queries with joins will be slower and can also lead to inconsistency and availability issues
